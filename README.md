@@ -1,7 +1,7 @@
 # FlappyBirdie
 Dilo Game Academy - Flappy Bird
 
-## Dilo Academy 5/7 (Next: Score) 
+## Dilo Academy 7/7 (TASK FINISHED, Submission not yet. ) 
 
 ### Bugs: ###
 [x] Game Assets  
