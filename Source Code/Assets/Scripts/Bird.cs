@@ -1,0 +1,72 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Events;
+
+public class Bird : MonoBehaviour
+{
+    [SerializeField] private float upForce = 100;
+    [SerializeField] private bool isDead;
+    [SerializeField] private UnityEvent OnJump, OnDead;
+
+    private Rigidbody2D rbody;
+    private Animator animator;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        rbody = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (!isDead && Input.GetMouseButtonDown(0))
+        {
+            //Debug.Log("hehehe");
+            BirdJump();
+        }
+    }
+
+    public bool IsDead()
+    {
+        return isDead;
+    }
+
+    public void Dead()
+    {
+        if (!isDead && OnDead != null)
+        {
+            OnDead.Invoke();
+        }
+
+        isDead = true;
+
+    }
+    void BirdJump()
+    {
+        //Mengecek rigidbody null atau tidak
+        if (rbody)
+        {
+            //menghentikan kecepatan burung ketika jatuh
+            rbody.velocity = Vector2.zero;
+
+            //Menambahkan gaya ke arah sumbu y agar burung meloncat
+            rbody.AddForce(new Vector2(0, upForce));
+        }
+
+        //Pengecekan Null variable
+        if (OnJump != null)
+        {
+            //Menjalankan semua event OnJump event
+            OnJump.Invoke();
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //menghentikan Animasi Burung ketika bersentukan dengan object lain
+        animator.enabled = false;
+    }
+
+}
