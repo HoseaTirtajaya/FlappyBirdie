@@ -9,8 +9,10 @@ Dilo Game Academy - Flappy Bird
 [x] isDead  
 [x] Ground Spawner  
 [x] No Script on pipe  
-[ ] No Score  
-[ ] No UI  
+[x] No Score  
+[x] No UI  
 [ ] Lubang antar pipa bisa berubah ukurannya secara random  
 [ ] Burung bisa menembak pipa  
 [ ] [Bonus] tambahkan tombol restart game setelah game over  
+[ ] Bug ketika game adding Score  
+[ ] UI Pause dan Restart  

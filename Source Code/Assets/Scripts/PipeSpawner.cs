@@ -9,6 +9,7 @@ public class PipeSpawner : MonoBehaviour
     [SerializeField] private float spawnInterval = 1;
     [SerializeField] public float holeSize = 1f;
     [SerializeField] private float maxMinOffset = 1;
+    [SerializeField] private Point point;
 
     private Coroutine CR_Spawn;
 
@@ -36,10 +37,8 @@ public class PipeSpawner : MonoBehaviour
     }
     void SpawnPipe()
     {
-
         //menduplikasi game object pipeUp dan menempatkan posisinya sama dengan game object ini tetapi dirotasi 180 derajat
         Pipe newPipeUp = Instantiate(pipeUp, transform.position, Quaternion.Euler(0, 0, 180));
-
 
         //Mengaktifkan game object newPipeUp
         newPipeUp.gameObject.SetActive(true);
@@ -58,6 +57,11 @@ public class PipeSpawner : MonoBehaviour
         float y = maxMinOffset * Mathf.Sin(Time.time);
         newPipeUp.transform.position += Vector3.up * y;
         newPipeDown.transform.position += Vector3.up * y;
+
+        Point newPoint = Instantiate(point, transform.position, Quaternion.identity);
+        newPoint.gameObject.SetActive(true);
+        newPoint.SetSize(holeSize);
+        newPoint.transform.position += Vector3.up * y;
     }
     IEnumerator IeSpawn()
     {

@@ -68,6 +68,9 @@
     <Compile Include="Assets\Scripts\GroundSpawner.cs" />
     <Compile Include="Assets\Scripts\Pipe.cs" />
     <Compile Include="Assets\Scripts\PipeSpawner.cs" />
+    <Compile Include="Assets\Scripts\Point.cs" />
+    <Compile Include="Assets\Scripts\SceneLoader.cs" />
+    <Compile Include="Assets\Scripts\WaitSeconds.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Scripts/Script/Tes(Unty)/FlappyBird/Source Code/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Events;
 
 public class Bird : MonoBehaviour
@@ -8,6 +9,9 @@ public class Bird : MonoBehaviour
     [SerializeField] private float upForce = 100;
     [SerializeField] private bool isDead;
     [SerializeField] private UnityEvent OnJump, OnDead;
+    [SerializeField] private int score;
+    [SerializeField] private UnityEvent OnAddPoint;
+    [SerializeField] private Text scoreText;
 
     private Rigidbody2D rbody;
     private Animator animator;
@@ -67,6 +71,24 @@ public class Bird : MonoBehaviour
     {
         //menghentikan Animasi Burung ketika bersentukan dengan object lain
         animator.enabled = false;
+    }
+
+    public void AddScore(int value)
+    {
+
+
+        //Menambahkan Score value
+        score += value;
+
+        //Mengubah nilai text pada score text
+        scoreText.text = score.ToString();
+
+        //Pengecekan Null Value
+        if (OnAddPoint != null)
+        {
+            //Memanggil semua event pada OnAddPoint
+            OnAddPoint.Invoke();
+        }
     }
 
 }
