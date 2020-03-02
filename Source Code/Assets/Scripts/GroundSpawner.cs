@@ -14,6 +14,10 @@ public class GroundSpawner : MonoBehaviour
     //Menampung ground sebelumnya
     private Ground prevGround;
 
+    private void Update()
+    {
+        this.transform.Translate(Vector3.right * 1.3f * Time.deltaTime, Space.World);
+    }
     private void SpawnGround()
     {
         //Pengecekan Null Variable

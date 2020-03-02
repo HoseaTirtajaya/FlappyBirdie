@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{E3EF6E53-88BE-20EB-65C7-C65330B49779}</ProjectGuid>
+    <ProjectGuid>{F01C11DC-3B7F-FDE2-DF7B-01A91EB29685}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -66,38 +66,33 @@
     <Compile Include="Assets\Scripts\Destroyer.cs" />
     <Compile Include="Assets\Scripts\Ground.cs" />
     <Compile Include="Assets\Scripts\GroundSpawner.cs" />
+    <Compile Include="Assets\Scripts\Pipe.cs" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>D:/Scripts/Script/Tes(Unty)/FlappyBird/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>D:/Scripts/Script/Tes(Unty)/FlappyBird/Source Code/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>D:/Scripts/Script/Tes(Unty)/FlappyBird/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>D:/Scripts/Script/Tes(Unty)/FlappyBird/Source Code/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/Scripts/Script/Tes(Unty)/FlappyBird/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/Scripts/Script/Tes(Unty)/FlappyBird/Source Code/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/Scripts/Script/Tes(Unty)/FlappyBird/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/Scripts/Script/Tes(Unty)/FlappyBird/Source Code/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>D:/Scripts/Script/Tes(Unty)/FlappyBird/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>D:/Scripts/Script/Tes(Unty)/FlappyBird/Source Code/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/Scripts/Script/Tes(Unty)/FlappyBird/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/Scripts/Script/Tes(Unty)/FlappyBird/Source Code/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>D:/Scripts/Script/Tes(Unty)/FlappyBird/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>D:/Scripts/Script/Tes(Unty)/FlappyBird/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>D:/Scripts/Script/Tes(Unty)/FlappyBird/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>D:/Scripts/Script/Tes(Unty)/FlappyBird/Source Code/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/Scripts/Script/Tes(Unty)/FlappyBird/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/Scripts/Script/Tes(Unty)/FlappyBird/Source Code/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>D:/Scripts/Script/Tes(Unty)/FlappyBird/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>D:/Scripts/Script/Tes(Unty)/FlappyBird/Source Code/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/2019.2.6f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
