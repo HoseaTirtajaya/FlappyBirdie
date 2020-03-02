@@ -8,5 +8,5 @@ Dilo Game Academy - Flappy Bird
 [x] Moving Ground  
 [x] isDead  
 [x] Ground Spawner  
-[ ] No Script on pipe  
+[x] No Script on pipe  
 [ ] No Score
