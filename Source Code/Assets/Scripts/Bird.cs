@@ -23,19 +23,30 @@ public class Bird : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //PlayerPrefs.DeleteAll();
         rbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
 
-        PlayerPrefs.SetInt("highScore", highScore);
+        highScore = PlayerPrefs.GetInt("highest");
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log(highScore);
         if (!isDead && Input.GetKeyDown(KeyCode.Space))
         {
             //Debug.Log("hehehe");
             BirdJump();
+        }
+
+        if (isDead)
+        {
+            if(score > highScore)
+            {
+                highScore = score;
+                PlayerPrefs.SetInt("highest", highScore);
+            }
         }
     }
 
@@ -87,15 +98,9 @@ public class Bird : MonoBehaviour
 
         //Mengubah nilai text pada score text
         scoreText.text = score.ToString();
-        if(highScore <= score)
-        {
-            highScore = score;
-            PlayerPrefs.GetInt("highScore", highScore);
-            PlayerPrefs.Save();
-            //Debug.Log(highScore);
-            currentScore.text = "Score: " + score.ToString();
-            High.text = "Highscore: " + highScore.ToString();
-        }
+
+        currentScore.text = "Score: " + score.ToString();
+        High.text = "Highscore: " + highScore.ToString();
 
         //Pengecekan Null Value
         if (OnAddPoint != null)
