@@ -815,7 +815,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.53, y: 1}
+  m_Size: {x: 0.4, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &434472943
 GameObject:
@@ -867,7 +867,7 @@ MonoBehaviour:
   pipeUp: {fileID: 1016795878}
   pipeDown: {fileID: 1013769523}
   spawnInterval: 2
-  holeSize: 1
+  holeSize: 1.4
   maxMinOffset: 1
   point: {fileID: 388271805}
 --- !u!1 &442049333
@@ -1178,7 +1178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5e0d1c51658d0f4f838261a65fa6763, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upForce: 100
+  upForce: 120
   isDead: 0
   OnJump:
     m_PersistentCalls:
@@ -1725,7 +1725,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 99f1d71cb68c5fb41bf33e48f3be86ac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1793,7 +1793,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 99f1d71cb68c5fb41bf33e48f3be86ac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1916,7 +1916,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: c19efed465c60754795a26a759d42d34, type: 3}
-    m_FontSize: 16
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1

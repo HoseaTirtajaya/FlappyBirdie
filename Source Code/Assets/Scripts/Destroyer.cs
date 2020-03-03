@@ -9,7 +9,10 @@ public class Destroyer : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Memusnahkan object ketika bersentuhan
-        Destroy(collision.gameObject);
+        if(collision.gameObject.tag != "Indestructible")
+        {
+            //Memusnahkan object ketika bersentuhan
+            Destroy(collision.gameObject);
+        }
     }
 }

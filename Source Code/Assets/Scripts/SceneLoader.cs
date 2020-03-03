@@ -8,7 +8,7 @@ public class SceneLoader : MonoBehaviour
 {
     public void LoadScene(string name)
     {
-        Debug.Log(string.IsNullOrEmpty(name));
+        //Debug.Log(string.IsNullOrEmpty(name));
         //Melakukan pengecekan jika name tidak null atau empty
         if (!string.IsNullOrEmpty(name))
         {

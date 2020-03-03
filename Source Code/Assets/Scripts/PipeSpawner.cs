@@ -6,7 +6,7 @@ public class PipeSpawner : MonoBehaviour
 {
     [SerializeField] private Bird bird;
     [SerializeField] private Pipe pipeUp, pipeDown;
-    [SerializeField] private float spawnInterval = 1;
+    [SerializeField] private float spawnInterval = 1f;
     [SerializeField] public float holeSize = 1f;
     [SerializeField] private float maxMinOffset = 1;
     [SerializeField] private Point point;
@@ -37,6 +37,9 @@ public class PipeSpawner : MonoBehaviour
     }
     void SpawnPipe()
     {
+        //spawnInterval = Random.Range(2.0f, 3.5f);
+        holeSize = Random.Range(1f, 1.5f);
+
         //menduplikasi game object pipeUp dan menempatkan posisinya sama dengan game object ini tetapi dirotasi 180 derajat
         Pipe newPipeUp = Instantiate(pipeUp, transform.position, Quaternion.Euler(0, 0, 180));
 
@@ -54,7 +57,7 @@ public class PipeSpawner : MonoBehaviour
         newPipeDown.transform.position += Vector3.down * (holeSize / 2);
 
         //menempatkan posisi pipa yang telah dibentuk agar posisinya menyesuaikan dengan fungsi Sin
-        float y = maxMinOffset * Mathf.Sin(Time.time);
+        float y = maxMinOffset * Mathf.Cos(Time.time);
         newPipeUp.transform.position += Vector3.up * y;
         newPipeDown.transform.position += Vector3.up * y;
 

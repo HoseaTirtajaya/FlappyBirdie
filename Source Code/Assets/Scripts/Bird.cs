@@ -26,7 +26,7 @@ public class Bird : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isDead && Input.GetMouseButtonDown(0))
+        if (!isDead && Input.GetKeyDown(KeyCode.Space))
         {
             //Debug.Log("hehehe");
             BirdJump();
@@ -57,7 +57,7 @@ public class Bird : MonoBehaviour
             rbody.velocity = Vector2.zero;
 
             //Menambahkan gaya ke arah sumbu y agar burung meloncat
-            rbody.AddForce(new Vector2(0, upForce));
+            rbody.AddForce(new Vector2(5f, upForce));
         }
 
         //Pengecekan Null variable
@@ -75,8 +75,6 @@ public class Bird : MonoBehaviour
 
     public void AddScore(int value)
     {
-
-
         //Menambahkan Score value
         score += value;
 
@@ -89,6 +87,11 @@ public class Bird : MonoBehaviour
             //Memanggil semua event pada OnAddPoint
             OnAddPoint.Invoke();
         }
+    }
+
+    public void ShootPipe()
+    {
+
     }
 
 }
