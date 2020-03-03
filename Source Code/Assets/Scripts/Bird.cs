@@ -9,9 +9,13 @@ public class Bird : MonoBehaviour
     [SerializeField] private float upForce = 100;
     [SerializeField] private bool isDead;
     [SerializeField] private UnityEvent OnJump, OnDead;
-    [SerializeField] private int score;
     [SerializeField] private UnityEvent OnAddPoint;
     [SerializeField] private Text scoreText;
+    [SerializeField] private Text currentScore;
+    [SerializeField] private Text High;
+
+    public int score;
+    public int highScore;
 
     private Rigidbody2D rbody;
     private Animator animator;
@@ -21,6 +25,8 @@ public class Bird : MonoBehaviour
     {
         rbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        PlayerPrefs.SetInt("highScore", highScore);
     }
 
     // Update is called once per frame
@@ -77,9 +83,19 @@ public class Bird : MonoBehaviour
     {
         //Menambahkan Score value
         score += value;
+        //Debug.Log(score);
 
         //Mengubah nilai text pada score text
         scoreText.text = score.ToString();
+        if(highScore <= score)
+        {
+            highScore = score;
+            PlayerPrefs.GetInt("highScore", highScore);
+            PlayerPrefs.Save();
+            //Debug.Log(highScore);
+            currentScore.text = "Score: " + score.ToString();
+            High.text = "Highscore: " + highScore.ToString();
+        }
 
         //Pengecekan Null Value
         if (OnAddPoint != null)

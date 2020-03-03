@@ -57,7 +57,7 @@ public class PipeSpawner : MonoBehaviour
         newPipeDown.transform.position += Vector3.down * (holeSize / 2);
 
         //menempatkan posisi pipa yang telah dibentuk agar posisinya menyesuaikan dengan fungsi Sin
-        float y = maxMinOffset * Mathf.Cos(Time.time);
+        float y = maxMinOffset * Mathf.Sin(Time.time);
         newPipeUp.transform.position += Vector3.up * y;
         newPipeDown.transform.position += Vector3.up * y;
 
