@@ -33,6 +33,7 @@ public class Bird : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         //Debug.Log(highScore);
         if (!isDead && Input.GetKeyDown(KeyCode.Space))
         {
@@ -48,6 +49,9 @@ public class Bird : MonoBehaviour
                 PlayerPrefs.SetInt("highest", highScore);
             }
         }
+
+        currentScore.text = "Score: " + score.ToString();
+        High.text = "Highscore: " + highScore.ToString();
     }
 
     public bool IsDead()
@@ -99,20 +103,12 @@ public class Bird : MonoBehaviour
         //Mengubah nilai text pada score text
         scoreText.text = score.ToString();
 
-        currentScore.text = "Score: " + score.ToString();
-        High.text = "Highscore: " + highScore.ToString();
-
         //Pengecekan Null Value
         if (OnAddPoint != null)
         {
             //Memanggil semua event pada OnAddPoint
             OnAddPoint.Invoke();
         }
-    }
-
-    public void ShootPipe()
-    {
-
     }
 
 }
