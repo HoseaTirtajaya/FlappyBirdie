@@ -15,5 +15,5 @@ Dilo Game Academy - Flappy Bird
 [x] Burung bisa menembak pipa  
 [x] [Bonus] tambahkan tombol restart game setelah game over  
 [x] UI Pause dan Restart  
-[x] Pipa hanya ter spawn 10x, Point masuk ke destroyer.
+[x] Pipa hanya ter spawn 10x, Point masuk ke destroyer.  
 [] Bug ketika game adding Score(Uncleared)  
