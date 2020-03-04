@@ -7,8 +7,8 @@ using UnityEngine.Events;
 public class Bird : MonoBehaviour
 {
     [SerializeField] private float upForce = 100;
-    [SerializeField] private bool isDead;
     [SerializeField] private UnityEvent OnJump, OnDead;
+    [SerializeField] private bool isDead;
     [SerializeField] private UnityEvent OnAddPoint;
     [SerializeField] private Text scoreText;
     [SerializeField] private Text currentScore;
@@ -33,9 +33,9 @@ public class Bird : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
         //Debug.Log(highScore);
-        if (!isDead && Input.GetKeyDown(KeyCode.Space))
+        if (!isDead && Input.GetKeyDown(KeyCode.Mouse0))
         {
             //Debug.Log("hehehe");
             BirdJump();
@@ -43,7 +43,7 @@ public class Bird : MonoBehaviour
 
         if (isDead)
         {
-            if(score > highScore)
+            if (score > highScore)
             {
                 highScore = score;
                 PlayerPrefs.SetInt("highest", highScore);
