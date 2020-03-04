@@ -1,7 +1,7 @@
 # FlappyBirdie
 Dilo Game Academy - Flappy Bird
 
-## Dilo Academy 7/7 (TASK FINISHED, Submission not yet. ) 
+## Dilo Academy 7/7 (TASK FINISHED, SUBMISSION DONE ) 
 
 ### Bugs: ###
 [x] Game Assets  
@@ -16,4 +16,4 @@ Dilo Game Academy - Flappy Bird
 [x] [Bonus] tambahkan tombol restart game setelah game over  
 [x] UI Pause dan Restart  
 [x] Pipa hanya ter spawn 10x, Point masuk ke destroyer.  
-[] Bug ketika game adding Score(Uncleared)  
+[UNCLEARED] Bug ketika game adding Score  
