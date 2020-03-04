@@ -14,6 +14,6 @@ Dilo Game Academy - Flappy Bird
 [x] Lubang antar pipa bisa berubah ukurannya secara random  
 [x] Burung bisa menembak pipa  
 [x] [Bonus] tambahkan tombol restart game setelah game over  
-[ ] Bug ketika game adding Score  
 [x] UI Pause dan Restart  
 [x] Pipa hanya ter spawn 10x, Point masuk ke destroyer.
+[] Bug ketika game adding Score  

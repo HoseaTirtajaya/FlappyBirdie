@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FirePoint : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public Text ammoDetails;
 
     private int ammo = 5;
 
@@ -16,6 +18,8 @@ public class FirePoint : MonoBehaviour
         {
             Shoot();
         }
+
+        ammoDetails.text = "Ammo : " + ammo.ToString();
     }
 
     private void Shoot()
