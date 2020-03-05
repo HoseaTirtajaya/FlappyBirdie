@@ -2,6 +2,9 @@
 Dilo Game Academy - Flappy Bird
 
 ## Dilo Academy 7/7 (TASK FINISHED, SUBMISSION DONE ) 
+How to Play:  
+1. Press Left Mouse Button to jump
+2. Press Right Mouse Button to shoot
 
 ### Bugs: ###
 [x] Game Assets  
